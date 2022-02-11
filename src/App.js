@@ -18,11 +18,9 @@ function App() {
         <Switch>
           <Route path="/">
             <Header  handleSideBarText={handleSideBarText}/>
-            <Sidebar showSideBarText={showSideBarText} />
+            <Sidebar showSideBarText={showSideBarText} handleSideBarText={handleSideBarText}/>
             <NoteInput />
           </Route>
-
-
         </Switch>
       </BrowserRouter>
 

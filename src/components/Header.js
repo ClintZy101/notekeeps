@@ -20,9 +20,9 @@ export const Header = ({ handleSideBarText }) => {
 
 
     return (
-        <div className="sticky top-0 flex items-center  p-1 bg-yellow-50  z-50  shadow-md text-gray-500 justify-between">
+        <div className="sticky top-0 flex items-center  p-1  z-50  shadow-md text-gray-500 justify-between">
             <div className="flex items-center space-x-2   ">
-                <div className="md:text-3xl cursor-pointer    transform transition duration-500  rounded-full p-3 hover:bg-yellow-200"
+                <div className="md:text-3xl cursor-pointer    transform transition duration-500  rounded-full p-3 hover:bg-yellow-100"
                     onClick={handleSideBarText}
                 >
                     <FiMenu
@@ -49,18 +49,18 @@ export const Header = ({ handleSideBarText }) => {
 
             <div className="flex items-center md:space-x-5 space-x-3">
 
-                <div className="md:text-2xl  md:p-3 md:opacity-0 text-lg  cursor-pointer hover:bg-yellow-200 rounded-full p-2 transform transition duration-500 flex items-center"
+                <div className="md:text-2xl  md:p-3 md:opacity-0 text-lg  cursor-pointer hover:bg-yellow-100 rounded-full p-2 transform transition duration-500 flex items-center"
                     onClick={handleSearchModal}
                 >
                     <BsSearch />
                 </div>
 
 
-                <div className="md:text-2xl text-lg  cursor-pointer hover:bg-yellow-200 rounded-full md:p-3 p-2 transform transition duration-500"
+                <div className="md:text-2xl text-lg  cursor-pointer hover:bg-yellow-100 rounded-full md:p-3 p-2 transform transition duration-500"
                 >
                     <BiCog />
                 </div>
-                <div className="md:text-2xl text-lg  cursor-pointer hover:bg-yellow-200 rounded-full md:p-3 p-2 transform transition duration-500"
+                <div className="md:text-2xl text-lg  cursor-pointer hover:bg-yellow-100 rounded-full md:p-3 p-2 transform transition duration-500"
                 >
                     <BsPerson />
                 </div>
