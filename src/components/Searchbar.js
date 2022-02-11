@@ -4,7 +4,7 @@ import { BiLeftArrowAlt } from 'react-icons/bi';
 
 export const Searchbar = ({handleSearchModal}) => {
     return (
-        <div className="flex items-center absolute top-0 mt-1  left-2  bg-white text-gray-500 rounded md:opacity-0  transform transition duration-500">
+        <div className="flex items-center absolute top-0 mt-2  left-2   text-gray-500 rounded md:opacity-0  transform transition duration-500 bg-gray-100">
             <span className="p-1 cursor-pointer hover:bg-gray-200 mx-2 text-gray-500 rounded-full"
             onClick={handleSearchModal}
             >

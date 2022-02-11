@@ -20,7 +20,7 @@ export const Header = ({ handleSideBarText }) => {
 
 
     return (
-        <div className="sticky top-0 flex items-center  p-1  z-50  shadow-md text-gray-500 justify-between">
+        <div className="sticky top-0 flex items-center  p-1  z-50  shadow-md text-gray-500 justify-between bg-white">
             <div className="flex items-center space-x-2   ">
                 <div className="md:text-3xl cursor-pointer    transform transition duration-500  rounded-full p-3 hover:bg-yellow-100"
                     onClick={handleSideBarText}
@@ -29,17 +29,18 @@ export const Header = ({ handleSideBarText }) => {
                     />
                 </div>
 
-                {/* <div>
-                    <img src="images/notes-icon.png" alt="" width="20" height="20" />
-                </div> */}
+                <div>
+                    <img src="images/Idyeas.png" alt="" width="50" height="50" />
+                </div>
 
                 <Link to="/">
-                    <h1 className="md:text-2xl text-lg">NoteKeeps</h1>
+                    <h1 className="md:text-2xl text-lg">Idyeas</h1>
                 </Link>
 
             </div>
+            {/* Search Bar */}
 
-            <form action="" className=" items-center space-x-2 bg-white px-2 w-80 hidden md:flex rounded-lg transform transition duration-500">
+            <form action="" className=" items-center space-x-2 bg-gray-100 px-2 w-80 hidden md:flex rounded-lg transform transition duration-500 ">
                 <BsSearch />
                 <input type="text" placeholder="Search Notes" className="h-10 pl-2 w-full flex-1 outline-none bg-transparent" />
             </form>
