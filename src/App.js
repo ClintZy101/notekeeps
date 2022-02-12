@@ -6,6 +6,9 @@ import { NoteInput } from './components/NoteInput';
 import { Notes } from './components/Notes';
 import { Sidebar } from './components/Sidebar';
 
+import { useMediaQuery } from 'react-responsive'
+import { ButtonSample } from './components/ButtonSample';
+
 
 function App() {
   const [showSideBarText, setShowSideBarText] = useState(false)
@@ -13,31 +16,35 @@ function App() {
   const handleSideBarText = useCallback(() => {
     setShowSideBarText(!showSideBarText);
   }, [showSideBarText]);
+
+  const isMobile = useMediaQuery({
+    query: '(min-width: 480px)'
+  })
+
   return (
     <div className="">
       <BrowserRouter>
         <Switch>
           <Route path="/">
 
-            <Header handleSideBarText={handleSideBarText} />
+            <Header handleSideBarText={handleSideBarText} showSideBarText={showSideBarText} />
 
             <div className="flex">
-              <Sidebar showSideBarText={showSideBarText} handleSideBarText={handleSideBarText} />
+              <Sidebar showSideBarText={showSideBarText} handleSideBarText={handleSideBarText} isMobile={isMobile}/>
               
-              <div className="flex">
+              <div className="flex ">
                 
-                <div className="w-24">
+                <div className="w-32">
                 </div>
 
                 <div className="grid gap-5">
                   <NoteInput />
                   <Notes />
+                  <ButtonSample />
                 </div>
 
               </div>
             </div>
-
-
 
           </Route>
         </Switch>

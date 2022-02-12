@@ -8,7 +8,7 @@ import { Searchbar } from './Searchbar';
 
 
 
-export const Header = ({ handleSideBarText }) => {
+export const Header = ({ handleSideBarText, showSideBarText, isMobile}) => {
 
 
     const [searchBar, setsearchBar] = useState(false);
@@ -22,7 +22,7 @@ export const Header = ({ handleSideBarText }) => {
     return (
         <div className="sticky top-0 flex items-center  p-1  z-50  shadow-md text-gray-500 justify-between bg-white">
             <div className="flex items-center space-x-2   ">
-                <div className="md:text-3xl cursor-pointer    transform transition duration-500  rounded-full p-3 hover:bg-yellow-100"
+                <div className={` md:text-3xl  flex  cursor-pointer    transform transition duration-500  rounded-full p-3  hover:bg-yellow-100 focus:bg-yellow-200 ${showSideBarText === true ? 'bg-yellow-200' : 'null'}`}
                     onClick={handleSideBarText}
                 >
                     <FiMenu
@@ -40,10 +40,11 @@ export const Header = ({ handleSideBarText }) => {
             </div>
             {/* Search Bar */}
 
-            <form action="" className=" items-center space-x-2 bg-gray-100 px-2 w-80 hidden md:flex rounded-lg transform transition duration-500 ">
+            {/* <form action="" className=" items-center space-x-2 bg-gray-100 px-2 w-80 hidden md:flex rounded-lg transform transition duration-500 ">
                 <BsSearch />
                 <input type="text" placeholder="Search Notes" className="h-10 pl-2 w-full flex-1 outline-none bg-transparent" />
-            </form>
+            </form> */}
+            <input class="hidden md:flex placeholder:italic placeholder:text-slate-400  bg-gray-50  border border-slate-300 rounded-md w-96 mx-auto pl-2 py-2  shadow-sm focus:outline-none focus:border-yellow-400 focus:ring-yellow-300 focus:ring-1 sm:text-sm" placeholder="Search Notes..." type="text" name="search"/>
 
 
             {searchBar ? <Searchbar handleSearchModal={handleSearchModal} /> : null}

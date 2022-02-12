@@ -9,12 +9,12 @@ import { BsCloudCheckFill } from 'react-icons/bs'
 
 export const Note = () => {
     return (
-        <div className="border shadow-md w-72 p-3 rounded-md grid gap-2 relative">
+        <div className="border shadow-md w-full md:mx-auto md:gap-2 md:w-72 p-3 rounded-md md:grid  relative">
             <span>
                 <BsCloudCheckFill className="text-blue-500 text-xl absolute -left-1 -top-2" />
             </span>
             <span>
-                <BsFillPinFill className="text-green-500 absolute right-2  " />
+                <BsFillPinFill className="text-gray-500 absolute right-2  " />
             </span>
         <h1 className="text-center font-medium">Title</h1>
         <p className="font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, illum ipsa unde commodi ducimus voluptate consequuntur totam consequatur mollitia est minus doloremque suscipit fugit cupiditate repellat quam sapiente voluptatem. Enim!</p>
