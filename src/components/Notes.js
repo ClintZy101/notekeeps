@@ -7,7 +7,7 @@ export const Notes = () => {
 
             {/* Notes Gallery */}
             <div className="mx-auto ">
-                <div className="">
+                <div className="ml-3">
                     <h1>Pinned</h1>
                 </div>
                 <div className="gap-3 p-3 flex flex-wrap ">
@@ -18,8 +18,9 @@ export const Notes = () => {
                     <Note />
                     <Note />
                 </div>
+            
             </div>
-
+            
         </div>
     )
 }

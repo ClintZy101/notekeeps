@@ -8,6 +8,10 @@ import { Sidebar } from './components/Sidebar';
 
 import { useMediaQuery } from 'react-responsive'
 import { ButtonSample } from './components/ButtonSample';
+import { IconToolTips } from './components/IconToolTips';
+import { NoteModal } from './components/NoteModal';
+import { FlowbiteModal } from './components/FlowbiteModal';
+import { ModalSample } from './components/ModalSample';
 
 
 function App() {
@@ -40,7 +44,9 @@ function App() {
                 <div className="grid gap-5">
                   <NoteInput />
                   <Notes />
-                  <ButtonSample />
+                  <NoteModal />
+                  {/* <ModalSample /> */}
+
                 </div>
 
               </div>

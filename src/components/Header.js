@@ -8,7 +8,7 @@ import { Searchbar } from './Searchbar';
 
 
 
-export const Header = ({ handleSideBarText, showSideBarText, isMobile}) => {
+export const Header = ({ handleSideBarText, showSideBarText, isMobile }) => {
 
 
     const [searchBar, setsearchBar] = useState(false);
@@ -20,7 +20,9 @@ export const Header = ({ handleSideBarText, showSideBarText, isMobile}) => {
 
 
     return (
-        <div className="sticky top-0 flex items-center  p-1  z-50  shadow-md text-gray-500 justify-between bg-white">
+        <div className="sticky top-0 flex items-center  p-1 pr-3 z-50  shadow-md text-gray-500 justify-between bg-white">
+
+            {/* Left Section */}
             <div className="flex items-center space-x-2   ">
                 <div className={` md:text-3xl  flex  cursor-pointer    transform transition duration-500  rounded-full p-3  hover:bg-yellow-100 focus:bg-yellow-200 ${showSideBarText === true ? 'bg-yellow-200' : 'null'}`}
                     onClick={handleSideBarText}
@@ -36,22 +38,27 @@ export const Header = ({ handleSideBarText, showSideBarText, isMobile}) => {
                 <Link to="/">
                     <h1 className="md:text-2xl text-lg">Idyeas</h1>
                 </Link>
+                {/* blank div for balanced views */}
+                <div className="w-10">
+
+                </div>
 
             </div>
-            {/* Search Bar */}
 
-            {/* <form action="" className=" items-center space-x-2 bg-gray-100 px-2 w-80 hidden md:flex rounded-lg transform transition duration-500 ">
-                <BsSearch />
-                <input type="text" placeholder="Search Notes" className="h-10 pl-2 w-full flex-1 outline-none bg-transparent" />
-            </form> */}
-            <input class="hidden md:flex placeholder:italic placeholder:text-slate-400  bg-gray-50  border border-slate-300 rounded-md w-96 mx-auto pl-2 py-2  shadow-sm focus:outline-none focus:border-yellow-400 focus:ring-yellow-300 focus:ring-1 sm:text-sm" placeholder="Search Notes..." type="text" name="search"/>
+            {/* Search Bar / Mid Section*/}
+            <div>
+                <input class="hidden md:flex placeholder:italic placeholder:text-slate-400  bg-gray-50  border border-slate-300 rounded-md w-96 mx-auto pl-2 py-2  shadow-sm focus:outline-none focus:border-yellow-400 focus:ring-yellow-300 focus:ring-1 sm:text-sm" placeholder="Search Notes..." type="text" name="search" />
 
 
-            {searchBar ? <Searchbar handleSearchModal={handleSearchModal} /> : null}
+                {searchBar ? <Searchbar handleSearchModal={handleSearchModal} /> : null}
+            </div>
+
+
+            {/* Right Section */}
 
             <div className="flex items-center md:space-x-5 space-x-3">
-
-                <div className="md:text-2xl  md:p-3 md:opacity-0 text-lg  cursor-pointer hover:bg-yellow-100 rounded-full p-2 transform transition duration-500 flex items-center"
+                {/* Hidden Icon > Small Screens Show */}
+                <div className="md:text-2xl  md:p-3 md:hidden text-lg  cursor-pointer hover:bg-yellow-100 rounded-full p-2 transform transition duration-500 flex items-center"
                     onClick={handleSearchModal}
                 >
                     <BsSearch />
@@ -66,6 +73,11 @@ export const Header = ({ handleSideBarText, showSideBarText, isMobile}) => {
                 >
                     <BsPerson />
                 </div>
+                <img
+                    className="inline-block h-10 w-10 rounded-full ring-2 ring-white"
+                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                    alt=""
+                />
             </div>
 
         </div>
