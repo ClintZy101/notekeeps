@@ -1,15 +1,16 @@
 import React from 'react'
 import { BsCardImage, BsCloudFill } from 'react-icons/bs'
-// import { BiPaint } from 'react-icons/bi'
 import { GoTasklist } from 'react-icons/go'
 import { IoColorPaletteOutline } from 'react-icons/io5'
 import { BsBell } from 'react-icons/bs'
 import { BsFillPinFill } from 'react-icons/bs'
 import { BsCloudCheckFill } from 'react-icons/bs'
 
-export const Note = () => {
+export const Note = ({noteModalIsOpen, handleNoteModal}) => {
     return (
-        <div className="border shadow-md w-full md:w-64 mx-auto gap-2  p-2 rounded-md grid  relative">
+        <div className="border shadow-md w-full md:w-64 mx-auto gap-2  p-2 rounded-md grid  relative"
+        onClick={handleNoteModal}
+        >
             <span>
                 <BsCloudCheckFill className="text-blue-500 text-xl absolute -left-1 -top-2" />
             </span>

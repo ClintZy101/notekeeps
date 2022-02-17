@@ -7,19 +7,21 @@ import { Notes } from './components/Notes';
 import { Sidebar } from './components/Sidebar';
 
 import { useMediaQuery } from 'react-responsive'
-import { ButtonSample } from './components/ButtonSample';
-import { IconToolTips } from './components/IconToolTips';
+
 import { NoteModal } from './components/NoteModal';
-import { FlowbiteModal } from './components/FlowbiteModal';
-import { ModalSample } from './components/ModalSample';
+
+
 
 
 function App() {
   const [showSideBarText, setShowSideBarText] = useState(false)
-
+  const [noteModalIsOpen, setNoteModalIsOpen] = useState(false)
   const handleSideBarText = useCallback(() => {
     setShowSideBarText(!showSideBarText);
   }, [showSideBarText]);
+  const handleNoteModal = useCallback(() => {
+    setNoteModalIsOpen(!noteModalIsOpen);
+  }, [noteModalIsOpen])
 
   const isMobile = useMediaQuery({
     query: '(min-width: 480px)'
@@ -43,8 +45,8 @@ function App() {
 
                 <div className="grid gap-5">
                   <NoteInput />
-                  <Notes />
-                  <NoteModal />
+                  <Notes handleNoteModal={handleNoteModal} noteModalIsOpen={noteModalIsOpen}/>
+                  <NoteModal handleNoteModal={handleNoteModal} noteModalIsOpen={noteModalIsOpen}/>
                   {/* <ModalSample /> */}
 
                 </div>

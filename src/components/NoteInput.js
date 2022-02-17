@@ -41,29 +41,27 @@ export const NoteInput = () => {
         <div className={`flex space-x-2 items-center  relative ${isOpen && 'grid'}`}>
 
           <div className={` flex items-center space-x-2 `}>
-            <input type="text" placeholder={`${isOpen ? 'Title' : 'Take a Note'}`} className=" border-none rounded my-2 flex-grow"
+            <input type="text" placeholder={`${isOpen ? 'Title' : 'Take a Note'}`} className="  outline-none rounded flex-grow my-2 px-2  border"
               onClick={() => openNoteInput()}
             />  
-            <span className={`${isOpen ? 'flex': 'hidden' } p-2 bg-gray-100 hover:bg-gray-200 cursor-pointer rounded-full"`}>
-            <BsPin /> 
+            <span className={`${isOpen ? 'flex': 'hidden' } p-2 bg-gray-100 hover:bg-gray-200 cursor-pointer rounded-full group`}>
+            <BsPin className=" group-hover:text-black text-gray-500  transition delay-300" /> 
               </span> 
                   
           </div>
 
-          {/* <textarea name="" id="" cols="30" rows="10" style={{resize: 'none'}}>afadsf
-            </textarea> */}
           {
             isOpen && <textarea style={{ resize: 'none' }} contenteditable="true" placeholder="Take a Note" className="outline-none rounded px-2 "></textarea>
           }
           <div className="flex items-center justify-between my-2">
-            <div className={`flex space-x-5 text-gray-500  ${isOpen ? 'relative justify-center my-3' : 'absolute right-2 '} `}>
+            <div className={`flex space-x-5 text-gray-500  ${isOpen ? 'relative justify-center my-3 ' : 'absolute right-2 '} `}>
               <BsCardImage className="cursor-pointer hover:text-black" />
               <GoTasklist className="cursor-pointer hover:text-black" />
               {/* <BiPaint className="cursor-pointer hover:text-black"/> */}
               <IoColorPaletteOutline className="cursor-pointer hover:text-black" />
               <BsBell className="cursor-pointer hover:text-black" />
             </div>
-            <div className={` ${isOpen ? 'p-2 px-3 cursor-pointer font-sans text-gray-500 hover:bg-gray-100 rounded' : 'hidden'} `}>
+            <div className={` ${isOpen ? 'p-2 px-3 cursor-pointer font-sans text-gray-500 transition delay-300 hover:bg-gray-100 hover:text-black rounded' : 'hidden'} `}>
               <h2>Keep Note </h2>
             </div>
 

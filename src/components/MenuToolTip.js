@@ -5,15 +5,13 @@ import { BsTrash } from 'react-icons/bs'
 import { BsFolder2Open } from 'react-icons/bs'
 import { SidebarOptions } from './SidebarOptions'
 
-export const IconToolTips = () => {
+export const MenuToolTip = () => {
     return (
-        <div className="fixed bottom-2 text-white bg-yellow-400 p-2">
-            <div className="group text-2xl">
-                <span className="group-hover:opacity-100 opacity-0 fixed- bottom-5">text</span>
-                <AiOutlineBell className="cursor-pointer" />
-                
+        <div>
+            <div className="flex">
+                <AiOutlineBulb />
+                <span className>Notes</span>
             </div>
-
         </div>
     )
 }
