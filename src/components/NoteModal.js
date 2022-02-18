@@ -16,12 +16,12 @@ export const NoteModal = ({ noteModalIsOpen, handleNoteModal }) => {
     return (
         <div className={`${noteModalIsOpen ? 'block' : 'hidden'}`}>
             {/* Modal */}
-            <div className="border bg-white   sm:w-8/12 sm:h-3/5 sm:inset-32 mx-auto  w-full left-0 top-32 h-3/5 fixed z-50 rounded-lg p-3 ">
+            <div className="border bg-white w-full  sm:w-8/12 sm:h-4/6 h-4/5 sm:inset-32 mx-auto   left-0 top-20 sm:top-32  fixed z-50 rounded-lg p-3 ">
 
 
                 <div className=" p-2  h-5/6 ">
                     <div className="flex items-center justify-between  text-2xl mb-1">
-                        <h1>Title</h1>
+                        <input type="text" placeholder="Title" className="flex-grow outline-none"/>
                         <IconWithBackground Icon={BsPin} />
                     </div>
                         <textarea style={{ resize: 'none', overflow: 'auto' }} className="h-full w-full outline-none mb-2 ">How can you discern whether a person is spiritual or a hypocrite or a fraud?

@@ -10,7 +10,7 @@ export const Notes = ({noteModalIsOpen, handleNoteModal}) => {
                 <div className="">
                     <h1>Pinned</h1>
                 </div>
-                <div className="gap-3 p-3 flex flex-wrap content-start ">
+                <div className="gap-3 p-3 flex flex-wrap transition delay-300 content-start ">
                     <Note handleNoteModal={handleNoteModal} noteModalIsOpen={noteModalIsOpen} />
                     <Note />
                     <Note />

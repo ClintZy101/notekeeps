@@ -34,14 +34,14 @@ export const NoteInput = () => {
 
   return (
     <div className="w-full ">
-      <div className="border rounded-lg  shadow-md  mx-auto mt-3  px-4 w-9/12"
+      <div className="border rounded-lg  shadow-md  mx-auto mt-3  px-4 w-11/12 sm:max-w-md"
         ref={noteEl}
         onClick={handleClick}
       >
         <div className={`flex space-x-2 items-center  relative ${isOpen && 'grid'}`}>
 
           <div className={` flex items-center space-x-2 `}>
-            <input type="text" placeholder={`${isOpen ? 'Title' : 'Take a Note'}`} className="  outline-none rounded flex-grow my-2 px-2  border"
+            <input type="text" placeholder={`${isOpen ? 'Title' : 'Take a Note'}`} className={`${isOpen === false ? '' :''} outline-none rounded flex-grow w-full my-2 px-2  `}  
               onClick={() => openNoteInput()}
             />  
             <span className={`${isOpen ? 'flex': 'hidden' } p-2 bg-gray-100 hover:bg-gray-200 cursor-pointer rounded-full group`}>
@@ -54,12 +54,12 @@ export const NoteInput = () => {
             isOpen && <textarea style={{ resize: 'none' }} contenteditable="true" placeholder="Take a Note" className="outline-none rounded px-2 "></textarea>
           }
           <div className="flex items-center justify-between my-2">
-            <div className={`flex space-x-5 text-gray-500  ${isOpen ? 'relative justify-center my-3 ' : 'absolute right-2 '} `}>
-              <BsCardImage className="cursor-pointer hover:text-black" />
-              <GoTasklist className="cursor-pointer hover:text-black" />
+            <div className={`flex space-x-5 text-gray-500  ${isOpen ? 'relative justify-center my-3  ' : 'absolute right-2 '} `}>
+              <BsCardImage className="cursor-pointer hover:text-yellow-500" />
+              <GoTasklist className="cursor-pointer hover:text-yellow-500" />
               {/* <BiPaint className="cursor-pointer hover:text-black"/> */}
-              <IoColorPaletteOutline className="cursor-pointer hover:text-black" />
-              <BsBell className="cursor-pointer hover:text-black" />
+              <IoColorPaletteOutline className="cursor-pointer hover:text-yellow-500" />
+              <BsBell className="cursor-pointer hover:text-yellow-500" />
             </div>
             <div className={` ${isOpen ? 'p-2 px-3 cursor-pointer font-sans text-gray-500 transition delay-300 hover:bg-gray-100 hover:text-black rounded' : 'hidden'} `}>
               <h2>Keep Note </h2>

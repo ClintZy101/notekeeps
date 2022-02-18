@@ -13,12 +13,12 @@ export const Sidebar = ({ showSideBarText, handleSideBarText }) => {
         className=""
             onClick={handleSideBarText}
         >
-            <div className={`h-screen flex-col gap-5  pt-3  px-2  text-gray-500   overflow-hidden z-50  transform duration-200  transition  ease-out delay-200 mt-2 md:mt-3 ${showSideBarText === true ? 'fixed top-12 bg-white ' : null} `}
+            <div className={`h-screen  flex-col gap-5  pt-3  px-2  text-gray-500   overflow-hidden z-50  transform duration-200  transition  ease-out delay-200 mt-0  md:mt-3 ${showSideBarText === true ? 'fixed top-12 bg-white ' : null} `}
             >
+
                 <SidebarOptions
                 className=""
                  Icon={AiOutlineBulb} text="Notes" showSideBarText={showSideBarText} />
-
 
                 <SidebarOptions Icon={AiOutlineBell} text="Reminders" showSideBarText={showSideBarText} />
                 <SidebarOptions Icon={BsFolder2Open} text="Ideas" showSideBarText={showSideBarText} />

@@ -24,11 +24,11 @@ export const Header = ({ handleSideBarText, showSideBarText, isMobile }) => {
 
             {/* Left Section */}
             <div className="flex items-center space-x-2   ">
-                <div className={` md:text-3xl  flex  cursor-pointer    transform transition duration-500  rounded-full p-3  hover:bg-yellow-100 focus:bg-yellow-200 ${showSideBarText === true ? 'bg-yellow-200' : 'null'}`}
+                <div className={`group md:text-3xl  flex items-center  cursor-pointer    transform transition duration-500  rounded-full p-3  hover:bg-yellow-100 focus:bg-yellow-200 ${showSideBarText === true ? 'bg-yellow-200' : 'null'}`}
                     onClick={handleSideBarText}
                 >
-                    <FiMenu
-                    />
+                    <FiMenu />
+                    <span className="group-hover:opacity-100 opacity-0 transition delay-300 absolute -right-14 bg-gray-500 text-white rounded  text-sm  border p-2 italic">Menu</span>
                 </div>
 
                 <div>
@@ -47,7 +47,7 @@ export const Header = ({ handleSideBarText, showSideBarText, isMobile }) => {
 
             {/* Search Bar / Mid Section*/}
             <div>
-                <input class="hidden md:flex placeholder:italic placeholder:text-slate-400  bg-gray-50  border border-slate-300 rounded-md w-96 mx-auto pl-2 py-2  shadow-sm focus:outline-none focus:border-yellow-400 focus:ring-yellow-300 focus:ring-1 sm:text-sm" placeholder="Search Notes..." type="text" name="search" />
+                <input class="hidden lg:flex placeholder:italic placeholder:text-slate-400  bg-gray-50  border border-slate-300 rounded-md w-96 mx-auto pl-2 py-2  shadow-sm focus:outline-none focus:border-yellow-400 focus:ring-yellow-300 focus:ring-1 sm:text-sm" placeholder="Search Notes..." type="text" name="search" />
 
 
                 {searchBar ? <Searchbar handleSearchModal={handleSearchModal} /> : null}
@@ -58,7 +58,7 @@ export const Header = ({ handleSideBarText, showSideBarText, isMobile }) => {
 
             <div className="flex items-center md:space-x-5 space-x-3">
                 {/* Hidden Icon > Small Screens Show */}
-                <div className="md:text-2xl  md:p-3 md:hidden text-lg  cursor-pointer hover:bg-yellow-100 rounded-full p-2 transform transition duration-500 flex items-center"
+                <div className="md:text-2xl  md:p-3 lg:hidden text-lg  cursor-pointer hover:bg-yellow-100 rounded-full p-2 transform transition duration-500 flex items-center"
                     onClick={handleSearchModal}
                 >
                     <BsSearch />
