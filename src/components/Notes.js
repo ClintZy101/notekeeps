@@ -5,7 +5,7 @@ export const Notes = ({noteModalIsOpen, handleNoteModal}) => {
     const notes = [
         {
             id: 1,
-            title: 'title',
+            title: 'title a very long title a veryyyyyy long  veryyyyyy long veryyyyyy long',
             content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, illum ipsa unde commodi ducimus voluptate consequuntur totam consequatur mollitia est minus doloremque suscipit fugit cupiditate repellat quam sapiente voluptatem. Enim!'
         },
        
@@ -20,6 +20,16 @@ export const Notes = ({noteModalIsOpen, handleNoteModal}) => {
             title: 'Title Num 3',
             content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, illum ipsa unde commodi ducimus voluptate consequuntur totam consequatur mollitia est minus doloremque suscipit fugit cupiditate repellat quam sapiente voluptatem. Enim!Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, illum ipsa unde commodi ducimus voluptate consequuntur totam consequatur mollitia est minus doloremque suscipit fugit cupiditate repellat quam sapiente voluptatem. Enim!'
         },
+        {
+            id: 4,
+            title: 'Title Num 3',
+            content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, illum ipsa unde commodi ducimus voluptate consequuntur totam consequatur mollitia est minus doloremque suscipit fugit cupiditate repellat quam sapiente voluptatem. Enim!Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, illum ipsa unde commodi ducimus voluptate consequuntur totam consequatur mollitia est minus doloremque suscipit fugit cupiditate repellat quam sapiente voluptatem. Enim!'
+        },
+        {
+            id: 5,
+            title: 'Title Num 3',
+            content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, illum ipsa unde commodi ducimus voluptate consequuntur totam consequatur mollitia est minus doloremque suscipit fugit cupiditate repellat quam sapiente voluptatem. Enim!Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, illum ipsa unde commodi ducimus voluptate consequuntur totam consequatur mollitia est minus doloremque suscipit fugit cupiditate repellat quam sapiente voluptatem. Enim!'
+        },
        
     ]
     return (
@@ -28,9 +38,9 @@ export const Notes = ({noteModalIsOpen, handleNoteModal}) => {
             {/* Notes Gallery */}
             <div className=" mx-auto">
                 <div className="">
-                    <h1>Pinned</h1>
+                    <h3 className="text-xs">PINNED</h3>
                 </div>
-                <div className="gap-3 p-3 grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 transition delay-300  ">
+                <div className="gap-3 p-3 grid  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  ">
                     {notes.map((note, index) => (
                         <Note 
                         handleNoteModal={handleNoteModal} noteModalIsOpen={noteModalIsOpen} 

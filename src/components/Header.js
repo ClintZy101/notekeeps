@@ -28,7 +28,7 @@ export const Header = ({ handleSideBarText, showSideBarText, isMobile }) => {
                     onClick={handleSideBarText}
                 >
                     <FiMenu />
-                    <span className="group-hover:opacity-100 opacity-0 transition delay-300 absolute -right-14 bg-gray-500 text-white rounded  text-sm  border p-2 italic">Menu</span>
+                    <span className="-bottom-5 -left-0 z-50 absolute text-sm group-hover:opacity-100 opacity-0 transition delay-300 bg-gray-500 text-white rounded-lg px-2">Menu</span>
                 </div>
 
                 <div>
@@ -58,20 +58,24 @@ export const Header = ({ handleSideBarText, showSideBarText, isMobile }) => {
 
             <div className="flex items-center md:space-x-5 space-x-3">
                 {/* Hidden Icon > Small Screens Show */}
-                <div className="md:text-2xl  md:p-3 lg:hidden text-lg  cursor-pointer hover:bg-yellow-100 rounded-full p-2 transform transition duration-500 flex items-center"
+                <div className="md:text-2xl  md:p-3 lg:hidden text-lg  cursor-pointer hover:bg-yellow-100 rounded-full p-2 transform transition duration-500 flex items-center group"
                     onClick={handleSearchModal}
                 >
                     <BsSearch />
+                    <span className="-bottom-5 -left-1 z-50 absolute text-sm group-hover:opacity-100 opacity-0 transition delay-300 bg-gray-500 text-white rounded-lg px-2">Search</span>
                 </div>
 
 
-                <div className="md:text-2xl text-lg  cursor-pointer hover:bg-yellow-100 rounded-full md:p-3 p-2 transform transition duration-500"
+                <div className="md:text-2xl text-lg  cursor-pointer hover:bg-yellow-100 rounded-full md:p-3 p-2 transform transition duration-500 group relative" 
                 >
                     <BiCog />
+                    <span className="-bottom-5 -left-2 z-50 absolute text-sm group-hover:opacity-100 opacity-0 transition delay-300 bg-gray-500 text-white rounded-lg px-2">Settings</span>
                 </div>
-                <div className="md:text-2xl text-lg  cursor-pointer hover:bg-yellow-100 rounded-full md:p-3 p-2 transform transition duration-500"
+
+                <div className="md:text-2xl text-lg  cursor-pointer hover:bg-yellow-100 rounded-full md:p-3 p-2 transform transition duration-500 relative group"
                 >
                     <BsPerson />
+                    <span className="-bottom-5 -left-2 z-50 absolute text-sm group-hover:opacity-100 opacity-0 transition delay-300 bg-gray-500 text-white rounded-lg px-2">Person</span>
                 </div>
                 <img
                     className="inline-block h-10 w-10 rounded-full ring-2 ring-white"

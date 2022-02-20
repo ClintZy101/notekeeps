@@ -2,6 +2,6 @@ Next to be built:
 1. Icon Tool Tips : for every icon
 2. Sidebar Icons : possibillity of making another component for tooltip only 
 because of the unfeasibility of making tooltips inside the Sidebar parent element
-3.
+3.Fix height of Note component
 
 x

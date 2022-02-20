@@ -17,11 +17,11 @@ export const Sidebar = ({ showSideBarText, handleSideBarText }) => {
             >
 
                 <SidebarOptions
-                className=""
                  Icon={AiOutlineBulb} text="Notes" showSideBarText={showSideBarText} />
 
                 <SidebarOptions Icon={AiOutlineBell} text="Reminders" showSideBarText={showSideBarText} />
                 <SidebarOptions Icon={BsFolder2Open} text="Ideas" showSideBarText={showSideBarText} />
+                
                 <SidebarOptions Icon={MdOutlineArchive} text="Archive" showSideBarText={showSideBarText} />
 
 

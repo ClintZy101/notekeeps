@@ -43,7 +43,7 @@ function App() {
                 <div className="w-32">
                 </div>
 
-                <div className="grid gap-5">
+                <div className="grid gap-5 ">
                   <NoteInput />
                   <Notes handleNoteModal={handleNoteModal} noteModalIsOpen={noteModalIsOpen}/>
                   <NoteModal handleNoteModal={handleNoteModal} noteModalIsOpen={noteModalIsOpen}/>
