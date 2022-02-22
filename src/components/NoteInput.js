@@ -33,8 +33,8 @@ export const NoteInput = () => {
   }, []);
 
   return (
-    <div className="w-full ">
-      <div className="border rounded-lg  shadow-md  mx-auto mt-3  px-4 w-11/12 sm:max-w-md"
+    <div className="w-72 sm:w-80 md:w-96 mx-auto">
+      <div className="border rounded-lg  shadow-md  mx-auto mt-3  px-4 w-full sm:max-w-md"
         ref={noteEl}
         onClick={handleClick}
       >

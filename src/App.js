@@ -36,22 +36,14 @@ function App() {
             <Header handleSideBarText={handleSideBarText} showSideBarText={showSideBarText} />
 
             <div className="flex">
-              <Sidebar showSideBarText={showSideBarText} handleSideBarText={handleSideBarText} isMobile={isMobile}/>
-              
-              <div className="flex ">
-                
-                <div className="w-32">
-                </div>
+              <Sidebar showSideBarText={showSideBarText} handleSideBarText={handleSideBarText} isMobile={isMobile} />
 
-                <div className="grid gap-5 ">
-                  <NoteInput />
-                  <Notes handleNoteModal={handleNoteModal} noteModalIsOpen={noteModalIsOpen}/>
-                  <NoteModal handleNoteModal={handleNoteModal} noteModalIsOpen={noteModalIsOpen}/>
-                  {/* <ModalSample /> */}
-
-                </div>
-
+              <div className="grid gap-5  w-max   mx-auto ">
+                <NoteInput />
+                <Notes handleNoteModal={handleNoteModal} noteModalIsOpen={noteModalIsOpen} />
+                <NoteModal handleNoteModal={handleNoteModal} noteModalIsOpen={noteModalIsOpen} />
               </div>
+
             </div>
 
           </Route>
